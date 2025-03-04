@@ -1,0 +1,16 @@
+{
+  "/breeds/list/all": {
+    "target": "https://dog.ceo",
+    "pathRewrite": {
+      "^/breeds/list/all": "/api/breeds/list/all"
+    },
+    "changeOrigin": true
+  },
+  "/breed": {
+    "target": "https://dog.ceo",
+    "pathRewrite": {
+      "^/breed": "/api/breed"
+    },
+    "changeOrigin": true
+  }
+}
