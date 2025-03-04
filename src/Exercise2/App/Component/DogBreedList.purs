@@ -6,7 +6,6 @@ import Data.Array as Array
 import Data.Maybe (Maybe(..))
 import Data.Monoid (guard)
 import Data.Tuple.Nested ((/\))
-import Effect.Aff.Class (class MonadAff)
 import Exercise2.App.Data.DogBreedListDTO (DogBreedDisplayArray)
 import Halogen as H
 import Halogen.HTML as HTML
@@ -17,7 +16,7 @@ import Halogen.Hooks as Hooks
 
 data Message = ViewBreed String (Maybe String)
 
-component :: forall q m. MonadAff m => H.Component q DogBreedDisplayArray Message m
+component :: forall q m. H.Component q DogBreedDisplayArray Message m
 component = Hooks.component \{ outputToken } displayArray -> Hooks.do
   Hooks.pure do
     HTML.div_
